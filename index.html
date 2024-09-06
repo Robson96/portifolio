@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>Portfólio</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <p class="header-title">Robson Magno</p>
+    </div>
+    <div>
+      <ul class="header-list">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contacts">Contatos</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="about">
+    <div class="about-img-wrapper">
+      <img class="about-img" src="./img/profile.jpg" alt="Robson Magno">
+    </div>
+    <div class="about-text-wrapper">
+      <h1>#Sobre mim</h1>
+      <p>
+        Sou um desenvolvedor fullstack com bastante experiência na área de TI. No backend, trabalho com Node.js,
+        enquanto no
+        frontend utilizo React.js para criar interfaces dinâmicas e eficientes. Além disso, desenvolvo aplicativos
+        mobile usando
+        React Native. Ao longo da minha carreira, tenho me dedicado a entregar projetos de alta qualidade, sempre
+        buscando
+        aprimorar minhas habilidades e acompanhar as tendências do mercado tecnológico.
+      </p>
+    </div>
+  </div>
+
+  <main id="projects">
+    <h2>#Projetos</h2>
+
+    <div class="project-card">
+      <video class="project-video" src="./video/lv_0_20240124114639.mp4" controls></video>
+      <p>Sistema de pagamento via Pix para um cliente varejista de medio porte aqui na minha regiao, os requisitos do
+        cliente é que não queria usar nenhuma API de pagamento para não pagar taxas, então foi criando um aplicativo
+        android que verifica cada notificação que o app recebe e que então se comunica com o sistema que foi feito em
+        electronjs.</p>
+    </div>
+
+    <div class="project-card">
+      <img id="fts" src="./img/f6.jpg" alt="">
+      <p>Um sistema de ponto eletronico, para registrar o ponto de entrada e saida de um colaborador, e com esse sistema
+        o cliente consegiu otimizar o tempo de trabalho.</p>
+      <p style="font-style: italic;">Clique na imagem para ver mais</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 3</h3>
+      <img id="fts2" src="./img/m1.png" alt="" srcset="">
+      <p>
+        Cliente solicitou um sistema completo para rastrear o caminho percorrido pelo colaborador, enquanto o
+        colaborador andava no carro da empresa e usava o celular da empresa, então foi feito um aplicativo e site web
+        para registrar o caminho percorrido pelo colaborador.
+      </p>
+      <p style="font-style: italic;">Clique na imagem para ver mais</p>
+      </p>
+    </div>
+  </main>
+
+  <footer id="contacts">
+    <h2>#Contatos</h2>
+
+    <div class="contact-card">
+      <div>
+        <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail">
+
+      </div>
+      <p>robson.magno2022@gmail.com</p>
+
+      <div>
+        <img src="https://img.icons8.com/color/48/000000/github.png" alt="Github">
+
+      </div>
+      <a href="https://github.com/Robson96" target="_blank" rel="noopener noreferrer">Github</a>
+
+      <div>
+        <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="Linkedin">
+      </div>
+      <a href="https://www.linkedin.com/in/robson-m-21478b11b/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+    </div>
+
+    <p class="copyright">Desenvolvido por Robson Magno - Copyright © 2024</p>
+  </footer>
+
+  <script>
+    let fts = document.getElementById('fts'), i = 1
+    fts.addEventListener('click', function () {
+      fts.src = './img/f' + (i >= 6 ? i = 1 : i++) + '.jpg'
+    })
+
+    let fts2 = document.getElementById('fts2'), j = 1
+    fts2.addEventListener('click', function () {
+      fts2.src = './img/m' + (j > 2 ? j = 1 : j++) + '.png'
+    })
+  </script>
+</body>
+
+</html>
